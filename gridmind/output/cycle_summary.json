@@ -1,0 +1,17 @@
+{
+  "scenario": "default",
+  "agent": {
+    "total_cost": 51.38,
+    "total_carbon": 66147.8,
+    "renewable_used": 646.2,
+    "curtailed": 551.2
+  },
+  "baseline": {
+    "total_cost": 71.19,
+    "total_carbon": 88444.4,
+    "renewable_used": 528.5,
+    "curtailed": 668.9
+  },
+  "cost_saved_pct": 27.8,
+  "carbon_saved_pct": 25.2
+}

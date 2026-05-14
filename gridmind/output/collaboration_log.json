@@ -1,0 +1,47 @@
+[
+  {
+    "hour": 7,
+    "action": "discharge_battery",
+    "amount_kwh": 15.61,
+    "classification": "consequential",
+    "reasoning": "Flagged as consequential: discharging 15.6 kWh (46% of remaining battery)",
+    "question": "",
+    "operator_response": "approved"
+  },
+  {
+    "hour": 14,
+    "action": "curtail_surplus",
+    "amount_kwh": 100.03,
+    "classification": "consequential",
+    "reasoning": "Flagged as consequential: curtailing 100.0 kWh of renewable energy",
+    "question": "",
+    "operator_response": "approved"
+  },
+  {
+    "hour": 15,
+    "action": "curtail_surplus",
+    "amount_kwh": 72.33,
+    "classification": "consequential",
+    "reasoning": "Flagged as consequential: curtailing 72.3 kWh of renewable energy",
+    "question": "",
+    "operator_response": "approved"
+  },
+  {
+    "hour": 16,
+    "action": "curtail_surplus",
+    "amount_kwh": 47.76,
+    "classification": "consequential",
+    "reasoning": "Flagged as consequential: curtailing 47.8 kWh of renewable energy",
+    "question": "",
+    "operator_response": "approved"
+  },
+  {
+    "hour": 20,
+    "action": "discharge_battery",
+    "amount_kwh": 25.0,
+    "classification": "consequential",
+    "reasoning": "Flagged as consequential: discharging 25.0 kWh (50% of remaining battery)",
+    "question": "",
+    "operator_response": "approved"
+  }
+]
