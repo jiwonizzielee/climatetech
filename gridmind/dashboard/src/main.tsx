@@ -6,7 +6,6 @@ import Overview from './pages/Overview';
 import Timeline from './pages/Timeline';
 import Collaboration from './pages/Collaboration';
 import Forecast from './pages/Forecast';
-import Scenarios from './pages/Scenarios';
 import Comparison from './pages/Comparison';
 import './index.css';
 
@@ -20,7 +19,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route path="timeline" element={<Timeline />} />
           <Route path="collaboration" element={<Collaboration />} />
           <Route path="forecast" element={<Forecast />} />
-          <Route path="scenarios" element={<Scenarios />} />
           <Route path="comparison" element={<Comparison />} />
         </Route>
       </Routes>

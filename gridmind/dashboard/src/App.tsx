@@ -5,7 +5,6 @@ const NAV = [
   { to: '/timeline',      icon: '📈', label: 'Timeline'      },
   { to: '/collaboration', icon: '🤝', label: 'Collaboration' },
   { to: '/forecast',      icon: '🔭', label: 'Forecast'      },
-  { to: '/scenarios',     icon: '🎛️', label: 'Scenarios'     },
   { to: '/comparison',    icon: '⚖️', label: 'Comparison'    },
 ];
 
