@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
 import {
-  AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
+  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
 } from 'recharts';
-import { loadResults, toEnergyMixData, ACTION_COLOR } from '../data';
+import { loadResults, toEnergyMixData } from '../data';
 import type { SimulationResult, HourRecord } from '../types';
 
-function StatCard({ value, label, color }: { value: string; label: string; color?: string }) {
+function StatCard({ value, label, accent }: { value: string; label: string; accent?: string }) {
   return (
-    <div className="card">
-      <div className="stat-value" style={color ? { color } : {}}>{value}</div>
+    <div className={`stat-card${accent ? ` ${accent}` : ''}`}>
       <div className="stat-label">{label}</div>
+      <div className="stat-value">{value}</div>
     </div>
   );
 }
@@ -74,10 +74,10 @@ export default function Overview() {
 
       {/* KPI row */}
       <div className="grid-4" style={{ marginBottom: 20 }}>
-        <StatCard value={`$${a.total_cost.toFixed(2)}`} label="Total cost (agent)" color="var(--green)" />
-        <StatCard value={`${(a.total_carbon / 1000).toFixed(1)} kg`} label="CO₂ emitted" color="var(--cyan)" />
-        <StatCard value={`${a.renewable_used.toFixed(0)} kWh`} label="Renewable used" color="var(--amber)" />
-        <StatCard value={`${consequential}`} label="Consequential decisions" color="var(--red)" />
+        <StatCard value={`$${a.total_cost.toFixed(2)}`} label="Total cost (agent)" accent="green" />
+        <StatCard value={`${(a.total_carbon / 1000).toFixed(1)} kg`} label="CO₂ emitted" accent="cyan" />
+        <StatCard value={`${a.renewable_used.toFixed(0)} kWh`} label="Renewable used" accent="amber" />
+        <StatCard value={`${consequential}`} label="Consequential decisions" accent="red" />
       </div>
 
       {/* Savings row */}
@@ -145,7 +145,7 @@ export default function Overview() {
               <YAxis domain={[0, 100]} tick={{ fontSize: 11, fill: 'var(--muted)' }} tickFormatter={(v) => `${v}%`} />
               <Tooltip
                 contentStyle={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 8 }}
-                formatter={(v: number) => [`${v}%`, 'SoC']}
+                formatter={(v) => [`${v}%`, 'SoC']}
               />
               <Area type="monotone" dataKey="soc" stroke="var(--green)" fill="rgba(34,197,94,0.2)" name="SoC %" />
             </AreaChart>
