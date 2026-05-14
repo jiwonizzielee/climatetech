@@ -1,136 +1,123 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import {
-  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
+  AreaChart, Area, XAxis, YAxis, CartesianGrid,
+  Tooltip, Legend, ResponsiveContainer,
 } from 'recharts';
+import { SCENARIOS, runSimulation, getSummary } from '../simulation';
 
-const SCENARIOS: Record<string, { description: string; solar: number; wind: number; demand: number; price: number }> = {
-  default: { description: 'Typical clear day, normal demand', solar: 1.0, wind: 1.0, demand: 1.0, price: 1.0 },
-  heat_wave: { description: 'High demand, reduced solar efficiency, grid price spikes', solar: 0.85, wind: 1.0, demand: 1.5, price: 1.4 },
-  cloudy_calm: { description: 'Low generation — battery and grid connection critical', solar: 0.3, wind: 0.4, demand: 1.0, price: 1.0 },
-  windy_night: { description: 'Strong overnight wind — store cheap energy ahead of demand', solar: 1.0, wind: 2.0, demand: 1.0, price: 1.0 },
-};
-
-function generateProfiles(solarF: number, windF: number, demandF: number) {
-  return Array.from({ length: 24 }, (_, h) => {
-    const solarPeak = h >= 6 && h <= 18 ? Math.exp(-0.5 * ((h - 12) / 3) ** 2) : 0;
-    const solar = +(80 * solarPeak * solarF).toFixed(1);
-    const windBase = 0.5 + 0.5 * Math.cos(Math.PI * (h - 12) / 12);
-    const wind = +(50 * windBase * windF).toFixed(1);
-    const morning = Math.exp(-0.5 * ((h - 8) / 1.5) ** 2);
-    const evening = 1.2 * Math.exp(-0.5 * ((h - 19) / 1.5) ** 2);
-    const demand = +(60 * (0.25 + morning + evening) * demandF).toFixed(1);
-    return {
-      hour: `${String(h).padStart(2, '0')}:00`,
-      solar,
-      wind,
-      demand,
-      net: +(solar + wind - demand).toFixed(1),
-    };
-  });
-}
+const TT = { contentStyle: { background: 'var(--bg-1)', border: '1px solid var(--border)', borderRadius: 8 }, labelStyle: { color: 'var(--text-2)' } };
 
 export default function Scenarios() {
-  const [selected, setSelected] = useState('default');
-  const sc = SCENARIOS[selected];
-  const profiles = generateProfiles(sc.solar, sc.wind, sc.demand);
+  const [selectedId, setSelectedId] = useState('clear');
+  const sc = SCENARIOS.find(s => s.id === selectedId)!;
 
-  const totalSolar = profiles.reduce((s, r) => s + r.solar, 0).toFixed(0);
-  const totalWind = profiles.reduce((s, r) => s + r.wind, 0).toFixed(0);
-  const totalDemand = profiles.reduce((s, r) => s + r.demand, 0).toFixed(0);
-  const surplus = profiles.filter((r) => r.net > 0).reduce((s, r) => s + r.net, 0).toFixed(0);
-  const deficit = profiles.filter((r) => r.net < 0).reduce((s, r) => s + Math.abs(r.net), 0).toFixed(0);
+  const sim     = useMemo(() => runSimulation(sc.solarMult, sc.loadMult, sc.priceMult), [selectedId]);
+  const summary = useMemo(() => getSummary(sim), [sim]);
+
+  const chartData = sim.map(h => ({
+    hour: h.label,
+    solar: h.totalSolarKw,
+    p2p: h.sharedLocallyKwh,
+    grid: h.gridImportKwh,
+    load: h.totalLoadKw,
+    independence: h.independenceScore,
+  }));
 
   return (
     <>
       <div className="page-title">Scenarios</div>
-      <div className="page-sub">Switch scenarios to re-preview generation &amp; demand profiles</div>
+      <div className="page-sub">Switch conditions to see how the P2P model responds — all metrics recalculate live across 72h</div>
 
+      {/* Scenario cards */}
       <div className="scenario-grid" style={{ marginBottom: 20 }}>
-        {Object.entries(SCENARIOS).map(([key, val]) => (
+        {SCENARIOS.map(s => (
           <div
-            key={key}
-            className={`scenario-card${selected === key ? ' selected' : ''}`}
-            onClick={() => setSelected(key)}
+            key={s.id}
+            className={`scenario-card${selectedId === s.id ? ' selected' : ''}`}
+            onClick={() => setSelectedId(s.id)}
           >
-            <div className="scenario-name">{key.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())}</div>
-            <div className="scenario-desc">{val.description}</div>
-            <div style={{ marginTop: 8, display: 'flex', gap: 12, fontSize: '0.75rem', color: 'var(--muted)' }}>
-              <span>Solar ×{val.solar}</span>
-              <span>Wind ×{val.wind}</span>
-              <span>Demand ×{val.demand}</span>
-              {val.price !== 1.0 && <span>Price ×{val.price}</span>}
+            <div style={{ fontSize: '1.5rem', marginBottom: 6 }}>{s.icon}</div>
+            <div className="scenario-name">{s.name}</div>
+            <div className="scenario-desc">{s.description}</div>
+            <div style={{ display: 'flex', gap: 10, marginTop: 10, flexWrap: 'wrap' }}>
+              {[
+                { l: 'Solar', v: `×${s.solarMult}`, c: s.solarMult < 0.8 ? 'var(--red)' : s.solarMult === 1 ? 'var(--text-3)' : 'var(--green)' },
+                { l: 'Load',  v: `×${s.loadMult}`,  c: s.loadMult > 1.1 ? 'var(--red)' : s.loadMult === 1 ? 'var(--text-3)' : 'var(--amber)' },
+                { l: 'Price', v: `×${s.priceMult}`, c: s.priceMult > 1 ? 'var(--red)' : s.priceMult < 1 ? 'var(--green)' : 'var(--text-3)' },
+              ].map(b => (
+                <span key={b.l} style={{ fontFamily: 'var(--mono)', fontSize: '0.65rem', color: b.c }}>
+                  {b.l} {b.v}
+                </span>
+              ))}
             </div>
           </div>
         ))}
       </div>
 
-      {/* Profile preview */}
+      {/* Scenario KPI cards */}
+      <div className="grid-4" style={{ marginBottom: 20 }}>
+        <div className="stat-card">
+          <div className="stat-label">Avg Independence</div>
+          <div className="stat-value" style={{ color: summary.avgIndependence >= 70 ? 'var(--teal)' : summary.avgIndependence >= 50 ? 'var(--amber)' : 'var(--red)', fontSize: '1.6rem' }}>
+            {summary.avgIndependence}%
+          </div>
+          <div className="stat-delta">{sc.name}</div>
+        </div>
+        <div className="stat-card green">
+          <div className="stat-label">P2P Shared (72h)</div>
+          <div className="stat-value" style={{ color: 'var(--green)', fontSize: '1.6rem' }}>{summary.totalSharedKwh} kWh</div>
+          <div className="stat-delta">neighbor-to-neighbor</div>
+        </div>
+        <div className="stat-card amber">
+          <div className="stat-label">Grid Import</div>
+          <div className="stat-value" style={{ color: 'var(--amber)', fontSize: '1.6rem' }}>{summary.totalGridKwh} kWh</div>
+          <div className="stat-delta">saved {summary.gridSavedKwh} kWh vs no-P2P</div>
+        </div>
+        <div className="stat-card cyan">
+          <div className="stat-label">Community Savings</div>
+          <div className="stat-value" style={{ color: 'var(--cyan)', fontSize: '1.6rem' }}>${summary.moneySaved}</div>
+          <div className="stat-delta">all 3 households</div>
+        </div>
+      </div>
+
+      {/* Energy flow chart */}
       <div className="card" style={{ marginBottom: 20 }}>
-        <div className="card-title">Generation &amp; Demand Preview — {selected.replace(/_/g, ' ')}</div>
+        <div className="card-title">Community Energy Flow — {sc.name} (72h · 15-min)</div>
         <div className="chart-wrap" style={{ height: 220 }}>
           <ResponsiveContainer width="100%" height="100%">
-            <AreaChart data={profiles} margin={{ top: 5, right: 10, left: -20, bottom: 0 }}>
+            <AreaChart data={chartData} margin={{ top: 5, right: 10, left: -15, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-              <XAxis dataKey="hour" tick={{ fontSize: 10, fill: 'var(--muted)' }} interval={2} />
-              <YAxis tick={{ fontSize: 10, fill: 'var(--muted)' }} />
-              <Tooltip
-                contentStyle={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 8 }}
-              />
+              <XAxis dataKey="hour" tick={{ fontSize: 10, fill: 'var(--text-2)' }} interval={23} />
+              <YAxis tick={{ fontSize: 10, fill: 'var(--text-2)' }} />
+              <Tooltip {...TT} />
               <Legend wrapperStyle={{ fontSize: 11 }} />
-              <Area type="monotone" dataKey="solar" stroke="#f59e0b" fill="#f59e0b30" name="Solar (kW)" />
-              <Area type="monotone" dataKey="wind" stroke="#06b6d4" fill="#06b6d430" name="Wind (kW)" />
-              <Area type="monotone" dataKey="demand" stroke="#e2e8f0" fill="#e2e8f015" strokeDasharray="4 2" name="Demand (kW)" />
+              <Area type="monotone" dataKey="solar" stroke="#f59e0b" fill="#f59e0b22" name="Solar (kW)"       strokeWidth={2} />
+              <Area type="monotone" dataKey="p2p"   stroke="#00d4b8" fill="#00d4b822" name="P2P Shared (kWh)" strokeWidth={2} />
+              <Area type="monotone" dataKey="grid"  stroke="#ef4444" fill="#ef444422" name="Grid Import (kWh)" strokeWidth={2} />
+              <Area type="monotone" dataKey="load"  stroke="#94a3b8" fill="none"      name="Load (kW)"         strokeWidth={1.5} strokeDasharray="5 3" />
             </AreaChart>
           </ResponsiveContainer>
         </div>
       </div>
 
-      {/* Net energy */}
-      <div className="card" style={{ marginBottom: 20 }}>
-        <div className="card-title">Net Energy Balance (generation − demand)</div>
-        <div className="chart-wrap" style={{ height: 160 }}>
-          <ResponsiveContainer width="100%" height="100%">
-            <AreaChart data={profiles} margin={{ top: 5, right: 10, left: -20, bottom: 0 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-              <XAxis dataKey="hour" tick={{ fontSize: 10, fill: 'var(--muted)' }} interval={2} />
-              <YAxis tick={{ fontSize: 10, fill: 'var(--muted)' }} />
-              <Tooltip
-                contentStyle={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 8 }}
-              />
-              <Area
-                type="monotone"
-                dataKey="net"
-                stroke="var(--green)"
-                fill="rgba(34,197,94,0.15)"
-                name="Net (kW)"
-              />
-            </AreaChart>
-          </ResponsiveContainer>
-        </div>
-      </div>
-
-      {/* Stats */}
-      <div className="grid-4">
-        {[
-          { v: `${totalSolar} kWh`, l: 'Total solar potential', c: 'var(--amber)' },
-          { v: `${totalWind} kWh`, l: 'Total wind potential', c: 'var(--cyan)' },
-          { v: `${totalDemand} kWh`, l: 'Total demand', c: 'var(--text)' },
-          { v: `+${surplus} / −${deficit}`, l: 'Surplus / deficit (kWh)', c: 'var(--green)' },
-        ].map((s) => (
-          <div key={s.l} className="card">
-            <div className="stat-value" style={{ color: s.c, fontSize: '1.4rem' }}>{s.v}</div>
-            <div className="stat-label">{s.l}</div>
-          </div>
-        ))}
-      </div>
-
-      <div className="card" style={{ marginTop: 20, borderColor: 'var(--green)' }}>
-        <div style={{ fontSize: '0.875rem', color: 'var(--muted)' }}>
-          To run the full simulation for this scenario:
-        </div>
-        <code style={{ display: 'block', marginTop: 8, fontSize: '0.85rem', color: 'var(--green)' }}>
-          python main.py --scenario {selected} --compare --reasoning --forecast
-        </code>
+      {/* Per-house breakdown for selected scenario */}
+      <div className="section-label" style={{ marginBottom: 12 }}>Household Impact — {sc.name}</div>
+      <div className="grid-3">
+        {summary.perHouse.map((ph, i) => {
+          const colors = ['var(--teal)', 'var(--amber)', 'var(--purple)'];
+          const color = colors[i];
+          return (
+            <div className="card" key={ph.id}>
+              <div style={{ fontFamily: 'var(--mono)', fontWeight: 700, fontSize: '0.82rem', color, marginBottom: 10 }}>{ph.name}</div>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', rowGap: 8, fontSize: '0.72rem', fontFamily: 'var(--mono)' }}>
+                <div><div style={{ color: 'var(--text-3)' }}>Exported</div><div style={{ color: 'var(--green)' }}>{ph.totalSentKwh} kWh</div></div>
+                <div><div style={{ color: 'var(--text-3)' }}>Received</div><div style={{ color: 'var(--teal)' }}>{ph.totalReceivedKwh} kWh</div></div>
+                <div><div style={{ color: 'var(--text-3)' }}>Net Cost</div><div style={{ color: 'var(--text-1)' }}>${ph.netCost}</div></div>
+                <div><div style={{ color: 'var(--text-3)' }}>P2P Benefit</div><div style={{ color: ph.p2pSaved >= 0 ? 'var(--green)' : 'var(--red)' }}>{ph.p2pSaved >= 0 ? '+' : ''}${ph.p2pSaved}</div></div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </>
   );

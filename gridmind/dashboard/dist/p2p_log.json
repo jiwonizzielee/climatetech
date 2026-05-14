@@ -1,0 +1,1211 @@
+[
+  {
+    "hour": 0,
+    "main_net_before": -14.75,
+    "main_net_after": -14.75,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 0.0,
+    "total_traded_kwh": 0,
+    "trades": [],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": -14.75,
+        "net_after": -14.75
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": -7.38,
+        "net_after": -7.38
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -26.55,
+        "net_after": -26.55
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": -4.42,
+        "net_after": -4.42
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": -32.45,
+        "net_after": -32.45
+      }
+    }
+  },
+  {
+    "hour": 1,
+    "main_net_before": -14.76,
+    "main_net_after": -14.76,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 0.0,
+    "total_traded_kwh": 0,
+    "trades": [],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": -14.760000000000002,
+        "net_after": -14.76
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": -7.67,
+        "net_after": -7.67
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -28.3,
+        "net_after": -28.3
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": -2.03,
+        "net_after": -2.03
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": -34.58,
+        "net_after": -34.58
+      }
+    }
+  },
+  {
+    "hour": 2,
+    "main_net_before": -12.39,
+    "main_net_after": -12.39,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 0.0924,
+    "total_traded_kwh": 4.53,
+    "trades": [
+      {
+        "seller": "wind_cottage",
+        "buyer": "community_hub",
+        "amount_kwh": 4.53,
+        "price_per_kwh": 0.0816
+      }
+    ],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": -12.39,
+        "net_after": -12.39
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": -7.18,
+        "net_after": -7.18
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -28.24,
+        "net_after": -28.24
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": 4.53,
+        "net_after": 0.0
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": -34.52,
+        "net_after": -29.99
+      }
+    }
+  },
+  {
+    "hour": 3,
+    "main_net_before": -6.52,
+    "main_net_after": -6.52,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 0.3972,
+    "total_traded_kwh": 18.39,
+    "trades": [
+      {
+        "seller": "wind_cottage",
+        "buyer": "community_hub",
+        "amount_kwh": 18.39,
+        "price_per_kwh": 0.0863
+      }
+    ],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": -6.52,
+        "net_after": -6.52
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": -5.7,
+        "net_after": -5.7
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -26.39,
+        "net_after": -26.39
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": 18.39,
+        "net_after": 0.0
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": -32.25,
+        "net_after": -13.86
+      }
+    }
+  },
+  {
+    "hour": 4,
+    "main_net_before": -6.3,
+    "main_net_after": -6.3,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 0.6459,
+    "total_traded_kwh": 25.94,
+    "trades": [
+      {
+        "seller": "wind_cottage",
+        "buyer": "community_hub",
+        "amount_kwh": 25.94,
+        "price_per_kwh": 0.0995
+      }
+    ],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": -6.299999999999999,
+        "net_after": -6.3
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": -6.49,
+        "net_after": -6.49
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -31.37,
+        "net_after": -31.37
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": 25.94,
+        "net_after": 0.0
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": -38.35,
+        "net_after": -12.41
+      }
+    }
+  },
+  {
+    "hour": 5,
+    "main_net_before": -3.91,
+    "main_net_after": -3.91,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 1.4772,
+    "total_traded_kwh": 46.6,
+    "trades": [
+      {
+        "seller": "wind_cottage",
+        "buyer": "community_hub",
+        "amount_kwh": 40.0,
+        "price_per_kwh": 0.1267
+      },
+      {
+        "seller": "wind_cottage",
+        "buyer": "ev_household",
+        "amount_kwh": 6.6,
+        "price_per_kwh": 0.1267
+      }
+    ],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": -3.91,
+        "net_after": -3.91
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": -7.69,
+        "net_after": -7.69
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -41.44,
+        "net_after": -34.84
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": 46.6,
+        "net_after": 0.0
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": -50.64,
+        "net_after": -10.64
+      }
+    }
+  },
+  {
+    "hour": 6,
+    "main_net_before": -5.81,
+    "main_net_after": -5.81,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 2.4486,
+    "total_traded_kwh": 58.58,
+    "trades": [
+      {
+        "seller": "wind_cottage",
+        "buyer": "community_hub",
+        "amount_kwh": 40.0,
+        "price_per_kwh": 0.1674
+      },
+      {
+        "seller": "wind_cottage",
+        "buyer": "ev_household",
+        "amount_kwh": 16.77,
+        "price_per_kwh": 0.1674
+      },
+      {
+        "seller": "casa_solar",
+        "buyer": "community_hub",
+        "amount_kwh": 1.81,
+        "price_per_kwh": 0.1674
+      }
+    ],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": -5.810000000000002,
+        "net_after": -5.81
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": 1.81,
+        "net_after": 0.0
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -71.62,
+        "net_after": -54.85
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": 56.77,
+        "net_after": 0.0
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": -82.56,
+        "net_after": -40.75
+      }
+    }
+  },
+  {
+    "hour": 7,
+    "main_net_before": -15.61,
+    "main_net_after": -15.61,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 3.3437,
+    "total_traded_kwh": 64.55,
+    "trades": [
+      {
+        "seller": "wind_cottage",
+        "buyer": "community_hub",
+        "amount_kwh": 40.0,
+        "price_per_kwh": 0.207
+      },
+      {
+        "seller": "wind_cottage",
+        "buyer": "ev_household",
+        "amount_kwh": 20.15,
+        "price_per_kwh": 0.207
+      },
+      {
+        "seller": "casa_solar",
+        "buyer": "community_hub",
+        "amount_kwh": 4.4,
+        "price_per_kwh": 0.207
+      }
+    ],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": -15.61,
+        "net_after": -15.61
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": 4.4,
+        "net_after": 0.0
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -107.17,
+        "net_after": -87.02
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": 60.15,
+        "net_after": 0.0
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": -122.52,
+        "net_after": -78.12
+      }
+    }
+  },
+  {
+    "hour": 8,
+    "main_net_before": -0.14,
+    "main_net_after": -0.14,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 5.8106,
+    "total_traded_kwh": 103.76,
+    "trades": [
+      {
+        "seller": "wind_cottage",
+        "buyer": "community_hub",
+        "amount_kwh": 40.0,
+        "price_per_kwh": 0.224
+      },
+      {
+        "seller": "wind_cottage",
+        "buyer": "ev_household",
+        "amount_kwh": 40.0,
+        "price_per_kwh": 0.224
+      },
+      {
+        "seller": "casa_solar",
+        "buyer": "community_hub",
+        "amount_kwh": 23.76,
+        "price_per_kwh": 0.224
+      }
+    ],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": -0.13999999999998636,
+        "net_after": -0.14
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": 23.76,
+        "net_after": 0.0
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -126.91,
+        "net_after": -86.91
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": 96.23,
+        "net_after": 16.23
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": -140.14,
+        "net_after": -76.38
+      }
+    }
+  },
+  {
+    "hour": 9,
+    "main_net_before": 29.15,
+    "main_net_after": -0.0,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 29.15,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 6.037,
+    "community_savings_usd": 8.3559,
+    "total_traded_kwh": 161.31,
+    "trades": [
+      {
+        "seller": "wind_cottage",
+        "buyer": "community_hub",
+        "amount_kwh": 40.0,
+        "price_per_kwh": 0.2071
+      },
+      {
+        "seller": "wind_cottage",
+        "buyer": "ev_household",
+        "amount_kwh": 40.0,
+        "price_per_kwh": 0.2071
+      },
+      {
+        "seller": "casa_solar",
+        "buyer": "community_hub",
+        "amount_kwh": 40.0,
+        "price_per_kwh": 0.2071
+      },
+      {
+        "seller": "casa_solar",
+        "buyer": "ev_household",
+        "amount_kwh": 12.16,
+        "price_per_kwh": 0.2071
+      },
+      {
+        "seller": "gridmind",
+        "buyer": "community_hub",
+        "amount_kwh": 25.37,
+        "price_per_kwh": 0.2071
+      },
+      {
+        "seller": "gridmind",
+        "buyer": "ev_household",
+        "amount_kwh": 3.78,
+        "price_per_kwh": 0.2071
+      }
+    ],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": 29.14999999999999,
+        "net_after": -0.0
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": 52.16,
+        "net_after": 0.0
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -103.55,
+        "net_after": -47.61
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": 112.74,
+        "net_after": 32.74
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": -105.37,
+        "net_after": 0.0
+      }
+    }
+  },
+  {
+    "hour": 10,
+    "main_net_before": 81.53,
+    "main_net_after": 81.53,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 4.2323,
+    "total_traded_kwh": 101.01,
+    "trades": [
+      {
+        "seller": "wind_cottage",
+        "buyer": "ev_household",
+        "amount_kwh": 40.0,
+        "price_per_kwh": 0.1674
+      },
+      {
+        "seller": "wind_cottage",
+        "buyer": "community_hub",
+        "amount_kwh": 40.0,
+        "price_per_kwh": 0.1674
+      },
+      {
+        "seller": "casa_solar",
+        "buyer": "ev_household",
+        "amount_kwh": 19.59,
+        "price_per_kwh": 0.1674
+      },
+      {
+        "seller": "casa_solar",
+        "buyer": "community_hub",
+        "amount_kwh": 1.42,
+        "price_per_kwh": 0.1674
+      }
+    ],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": 81.53,
+        "net_after": 81.53
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": 100.62,
+        "net_after": 79.61
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -59.59,
+        "net_after": 0.0
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": 144.02,
+        "net_after": 64.02
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": -41.42,
+        "net_after": 0.0
+      }
+    }
+  },
+  {
+    "hour": 11,
+    "main_net_before": 110.31,
+    "main_net_after": 110.31,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 0.8382,
+    "total_traded_kwh": 26.36,
+    "trades": [
+      {
+        "seller": "wind_cottage",
+        "buyer": "ev_household",
+        "amount_kwh": 26.36,
+        "price_per_kwh": 0.1271
+      }
+    ],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": 110.30999999999997,
+        "net_after": 110.31
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": 123.04,
+        "net_after": 123.04
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -26.36,
+        "net_after": 0.0
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": 158.72,
+        "net_after": 132.36
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": 2.91,
+        "net_after": 2.91
+      }
+    }
+  },
+  {
+    "hour": 12,
+    "main_net_before": 114.33,
+    "main_net_after": 114.33,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 0.3216,
+    "total_traded_kwh": 12.66,
+    "trades": [
+      {
+        "seller": "casa_solar",
+        "buyer": "ev_household",
+        "amount_kwh": 12.66,
+        "price_per_kwh": 0.1016
+      }
+    ],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": 114.33,
+        "net_after": 114.33
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": 137.32,
+        "net_after": 124.66
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -12.66,
+        "net_after": 0.0
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": 131.12,
+        "net_after": 131.12
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": 23.38,
+        "net_after": 23.38
+      }
+    }
+  },
+  {
+    "hour": 13,
+    "main_net_before": 106.48,
+    "main_net_after": 106.48,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 0.2856,
+    "total_traded_kwh": 12.1,
+    "trades": [
+      {
+        "seller": "wind_cottage",
+        "buyer": "ev_household",
+        "amount_kwh": 12.1,
+        "price_per_kwh": 0.0946
+      }
+    ],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": 106.48,
+        "net_after": 106.48
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": 115.93,
+        "net_after": 115.93
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -12.1,
+        "net_after": 0.0
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": 143.65,
+        "net_after": 131.55
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": 17.43,
+        "net_after": 17.43
+      }
+    }
+  },
+  {
+    "hour": 14,
+    "main_net_before": 100.03,
+    "main_net_after": 100.03,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 0.3669,
+    "total_traded_kwh": 13.74,
+    "trades": [
+      {
+        "seller": "wind_cottage",
+        "buyer": "ev_household",
+        "amount_kwh": 13.74,
+        "price_per_kwh": 0.107
+      }
+    ],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": 100.03,
+        "net_after": 100.03
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": 111.78,
+        "net_after": 111.78
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -13.74,
+        "net_after": 0.0
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": 132.44,
+        "net_after": 118.7
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": 14.56,
+        "net_after": 14.56
+      }
+    }
+  },
+  {
+    "hour": 15,
+    "main_net_before": 72.33,
+    "main_net_after": 72.33,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 0.9365,
+    "total_traded_kwh": 26.53,
+    "trades": [
+      {
+        "seller": "wind_cottage",
+        "buyer": "ev_household",
+        "amount_kwh": 21.16,
+        "price_per_kwh": 0.1411
+      },
+      {
+        "seller": "wind_cottage",
+        "buyer": "community_hub",
+        "amount_kwh": 5.37,
+        "price_per_kwh": 0.1411
+      }
+    ],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": 72.33,
+        "net_after": 72.33
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": 72.4,
+        "net_after": 72.4
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -21.16,
+        "net_after": 0.0
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": 122.98,
+        "net_after": 96.45
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": -5.37,
+        "net_after": 0.0
+      }
+    }
+  },
+  {
+    "hour": 16,
+    "main_net_before": 47.76,
+    "main_net_after": 47.76,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 3.4122,
+    "total_traded_kwh": 70.5,
+    "trades": [
+      {
+        "seller": "wind_cottage",
+        "buyer": "ev_household",
+        "amount_kwh": 38.55,
+        "price_per_kwh": 0.1936
+      },
+      {
+        "seller": "wind_cottage",
+        "buyer": "community_hub",
+        "amount_kwh": 31.95,
+        "price_per_kwh": 0.1936
+      }
+    ],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": 47.75999999999999,
+        "net_after": 47.76
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": 48.65,
+        "net_after": 48.65
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -38.55,
+        "net_after": 0.0
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": 106.59,
+        "net_after": 36.09
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": -31.95,
+        "net_after": 0.0
+      }
+    }
+  },
+  {
+    "hour": 17,
+    "main_net_before": 6.99,
+    "main_net_after": 0.0,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 6.99,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 1.7139,
+    "community_savings_usd": 5.9326,
+    "total_traded_kwh": 96.78,
+    "trades": [
+      {
+        "seller": "wind_cottage",
+        "buyer": "community_hub",
+        "amount_kwh": 40.0,
+        "price_per_kwh": 0.2452
+      },
+      {
+        "seller": "wind_cottage",
+        "buyer": "ev_household",
+        "amount_kwh": 34.46,
+        "price_per_kwh": 0.2452
+      },
+      {
+        "seller": "casa_solar",
+        "buyer": "community_hub",
+        "amount_kwh": 15.33,
+        "price_per_kwh": 0.2452
+      },
+      {
+        "seller": "gridmind",
+        "buyer": "community_hub",
+        "amount_kwh": 6.99,
+        "price_per_kwh": 0.2452
+      }
+    ],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": 6.990000000000002,
+        "net_after": 0.0
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": 15.33,
+        "net_after": 0.0
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -72.78,
+        "net_after": -38.32
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": 74.46,
+        "net_after": -0.0
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": -80.26,
+        "net_after": -17.94
+      }
+    }
+  },
+  {
+    "hour": 18,
+    "main_net_before": -37.89,
+    "main_net_after": -37.89,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 2.8029,
+    "total_traded_kwh": 41.96,
+    "trades": [
+      {
+        "seller": "wind_cottage",
+        "buyer": "community_hub",
+        "amount_kwh": 40.0,
+        "price_per_kwh": 0.2672
+      },
+      {
+        "seller": "wind_cottage",
+        "buyer": "ev_household",
+        "amount_kwh": 1.96,
+        "price_per_kwh": 0.2672
+      }
+    ],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": -37.88999999999999,
+        "net_after": -37.89
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": -14.06,
+        "net_after": -14.06
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -124.89,
+        "net_after": -122.93
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": 41.96,
+        "net_after": 0.0
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": -147.87,
+        "net_after": -107.87
+      }
+    }
+  },
+  {
+    "hour": 19,
+    "main_net_before": -67.79,
+    "main_net_after": -67.79,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 1.6085,
+    "total_traded_kwh": 26.24,
+    "trades": [
+      {
+        "seller": "wind_cottage",
+        "buyer": "community_hub",
+        "amount_kwh": 26.24,
+        "price_per_kwh": 0.2452
+      }
+    ],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": -67.79,
+        "net_after": -67.79
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": -39.48,
+        "net_after": -39.48
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -155.56,
+        "net_after": -155.56
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": 26.24,
+        "net_after": 0.0
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": -190.12,
+        "net_after": -163.88
+      }
+    }
+  },
+  {
+    "hour": 20,
+    "main_net_before": -60.47,
+    "main_net_after": -60.47,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 0.4322,
+    "total_traded_kwh": 8.93,
+    "trades": [
+      {
+        "seller": "wind_cottage",
+        "buyer": "community_hub",
+        "amount_kwh": 8.93,
+        "price_per_kwh": 0.1935
+      }
+    ],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": -60.47,
+        "net_after": -60.47
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": -33.48,
+        "net_after": -33.48
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -128.34,
+        "net_after": -128.34
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": 8.93,
+        "net_after": 0.0
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": -156.86,
+        "net_after": -147.93
+      }
+    }
+  },
+  {
+    "hour": 21,
+    "main_net_before": -38.27,
+    "main_net_after": -38.27,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 0.2478,
+    "total_traded_kwh": 7.04,
+    "trades": [
+      {
+        "seller": "wind_cottage",
+        "buyer": "community_hub",
+        "amount_kwh": 7.04,
+        "price_per_kwh": 0.1408
+      }
+    ],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": -38.269999999999996,
+        "net_after": -38.27
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": -21.36,
+        "net_after": -21.36
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -82.22,
+        "net_after": -82.22
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": 7.04,
+        "net_after": 0.0
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": -100.5,
+        "net_after": -93.46
+      }
+    }
+  },
+  {
+    "hour": 22,
+    "main_net_before": -22.11,
+    "main_net_after": -22.11,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 0.0189,
+    "total_traded_kwh": 0.72,
+    "trades": [
+      {
+        "seller": "wind_cottage",
+        "buyer": "community_hub",
+        "amount_kwh": 0.72,
+        "price_per_kwh": 0.1054
+      }
+    ],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": -22.11,
+        "net_after": -22.11
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": -11.94,
+        "net_after": -11.94
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -45.09,
+        "net_after": -45.09
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": 0.72,
+        "net_after": 0.0
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": -55.11,
+        "net_after": -54.39
+      }
+    }
+  },
+  {
+    "hour": 23,
+    "main_net_before": -16.85,
+    "main_net_after": -16.85,
+    "main_bought_kwh": 0,
+    "main_sold_kwh": 0,
+    "main_p2p_cost_usd": 0,
+    "main_p2p_revenue_usd": 0,
+    "community_savings_usd": 0.0,
+    "total_traded_kwh": 0,
+    "trades": [],
+    "peer_nets": {
+      "gridmind": {
+        "name": "GridMind",
+        "net_before": -16.849999999999998,
+        "net_after": -16.85
+      },
+      "casa_solar": {
+        "name": "Casa Solar",
+        "net_before": -8.64,
+        "net_after": -8.64
+      },
+      "ev_household": {
+        "name": "EV Household",
+        "net_before": -31.64,
+        "net_after": -31.64
+      },
+      "wind_cottage": {
+        "name": "Wind Cottage",
+        "net_before": -3.23,
+        "net_after": -3.23
+      },
+      "community_hub": {
+        "name": "Community Hub",
+        "net_before": -38.68,
+        "net_after": -38.68
+      }
+    }
+  }
+]

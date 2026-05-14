@@ -1,0 +1,170 @@
+[
+  {
+    "hour": 0,
+    "action": "draw_from_grid",
+    "amount_kwh": 14.75,
+    "classification": "routine",
+    "reasoning": ""
+  },
+  {
+    "hour": 1,
+    "action": "draw_from_grid",
+    "amount_kwh": 14.76,
+    "classification": "routine",
+    "reasoning": ""
+  },
+  {
+    "hour": 2,
+    "action": "draw_from_grid",
+    "amount_kwh": 12.39,
+    "classification": "routine",
+    "reasoning": ""
+  },
+  {
+    "hour": 3,
+    "action": "draw_from_grid",
+    "amount_kwh": 6.52,
+    "classification": "routine",
+    "reasoning": ""
+  },
+  {
+    "hour": 4,
+    "action": "draw_from_grid",
+    "amount_kwh": 6.3,
+    "classification": "routine",
+    "reasoning": ""
+  },
+  {
+    "hour": 5,
+    "action": "draw_from_grid",
+    "amount_kwh": 3.91,
+    "classification": "routine",
+    "reasoning": ""
+  },
+  {
+    "hour": 6,
+    "action": "discharge_battery",
+    "amount_kwh": 5.81,
+    "classification": "routine",
+    "reasoning": ""
+  },
+  {
+    "hour": 7,
+    "action": "discharge_battery",
+    "amount_kwh": 15.61,
+    "classification": "consequential",
+    "reasoning": "Flagged as consequential: discharging 15.6 kWh (46% of remaining battery)"
+  },
+  {
+    "hour": 8,
+    "action": "discharge_battery",
+    "amount_kwh": 0.14,
+    "classification": "routine",
+    "reasoning": ""
+  },
+  {
+    "hour": 9,
+    "action": "discharge_battery",
+    "amount_kwh": 0.0,
+    "classification": "routine",
+    "reasoning": ""
+  },
+  {
+    "hour": 10,
+    "action": "charge_battery",
+    "amount_kwh": 25.0,
+    "classification": "routine",
+    "reasoning": ""
+  },
+  {
+    "hour": 11,
+    "action": "charge_battery",
+    "amount_kwh": 25.0,
+    "classification": "routine",
+    "reasoning": ""
+  },
+  {
+    "hour": 12,
+    "action": "charge_battery",
+    "amount_kwh": 25.0,
+    "classification": "routine",
+    "reasoning": ""
+  },
+  {
+    "hour": 13,
+    "action": "charge_battery",
+    "amount_kwh": 6.56,
+    "classification": "routine",
+    "reasoning": ""
+  },
+  {
+    "hour": 14,
+    "action": "curtail_surplus",
+    "amount_kwh": 100.03,
+    "classification": "consequential",
+    "reasoning": "Flagged as consequential: curtailing 100.0 kWh of renewable energy"
+  },
+  {
+    "hour": 15,
+    "action": "curtail_surplus",
+    "amount_kwh": 72.33,
+    "classification": "consequential",
+    "reasoning": "Flagged as consequential: curtailing 72.3 kWh of renewable energy"
+  },
+  {
+    "hour": 16,
+    "action": "curtail_surplus",
+    "amount_kwh": 47.76,
+    "classification": "consequential",
+    "reasoning": "Flagged as consequential: curtailing 47.8 kWh of renewable energy"
+  },
+  {
+    "hour": 17,
+    "action": "curtail_surplus",
+    "amount_kwh": 0.0,
+    "classification": "routine",
+    "reasoning": ""
+  },
+  {
+    "hour": 18,
+    "action": "discharge_battery",
+    "amount_kwh": 25.0,
+    "classification": "routine",
+    "reasoning": ""
+  },
+  {
+    "hour": 19,
+    "action": "discharge_battery",
+    "amount_kwh": 25.0,
+    "classification": "routine",
+    "reasoning": ""
+  },
+  {
+    "hour": 20,
+    "action": "discharge_battery",
+    "amount_kwh": 25.0,
+    "classification": "consequential",
+    "reasoning": "Flagged as consequential: discharging 25.0 kWh (50% of remaining battery)"
+  },
+  {
+    "hour": 21,
+    "action": "draw_from_grid",
+    "amount_kwh": 38.27,
+    "classification": "routine",
+    "reasoning": ""
+  },
+  {
+    "hour": 22,
+    "action": "draw_from_grid",
+    "amount_kwh": 22.11,
+    "classification": "routine",
+    "reasoning": ""
+  },
+  {
+    "hour": 23,
+    "action": "draw_from_grid",
+    "amount_kwh": 16.85,
+    "classification": "routine",
+    "reasoning": ""
+  }
+]
