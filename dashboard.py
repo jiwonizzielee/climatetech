@@ -768,3 +768,7 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
+pip install streamlit plotly pandas numpy
+streamlit run dashboard.py
+
