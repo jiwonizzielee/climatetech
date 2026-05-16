@@ -1,4 +1,5 @@
-# KineticKin
+# KineticKin 
+### Greentown Labs x TEDxHarvard Square Climate AI Hackathon — 3rd Place
 
 KineticKin is a multi-agent energy intelligence platform for neighborhood microgrids. It has two interconnected subsystems:
 
